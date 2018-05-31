@@ -2,13 +2,11 @@ describe('Google Search Tests', function () {
     context('for demo purposes', function () {
 
         beforeEach(function (client, done) {
-            console.log('Starting test...')
             client.resizeWindow(800, 600);
             done();
         });
 
         afterEach(function (client, done) {
-            console.log('Ending test...')
             done();
         });
 
