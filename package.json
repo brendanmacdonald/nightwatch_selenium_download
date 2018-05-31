@@ -1,0 +1,14 @@
+{
+    "name": "nightwatch_tests",
+    "version": "0.0.1",
+    "scripts": {
+        "test": "nightwatch tests/ -e default",
+        "e2e:setup": "node selenium-setup"
+    },
+    "devDependencies": {
+        "mocha": "^5.2.0",
+        "nightwatch": "^0.9.21",
+        "selenium-download": "^2.0.12"
+    },
+    "dependencies": {}
+}
