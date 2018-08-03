@@ -1,10 +1,6 @@
 {
     "src_folders" : ["tests"],
-    "output_folder" : "./reports",
-    "custom_commands_path" : "",
-    "custom_assertions_path" : "",
     "page_objects_path" : "page",
-    "globals_path" : "",
     "selenium" : {
       "start_process" : true,
       "server_path" : "./bin/selenium.jar",
@@ -14,7 +10,6 @@
         "webdriver.chrome.driver" : "./bin/chromedriver"
       }
     },
-  
     "test_settings" : {
       "default" : {
         "selenium_port"  : 4444,
@@ -24,7 +19,10 @@
           "type" : "mocha",
           "options" : {
             "ui" : "bdd",
-            "reporter" : "list"
+            "reporter" : "mocha-junit-reporter",
+            "reporterOptions": {
+              "mochaFile": "reports/results.xml"
+            }
           }
         },
         "screenshots" : {
